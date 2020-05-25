@@ -1,0 +1,10 @@
+Anjay/bootstrap/*
+Anjay/example_configs/*
+Anjay/deps/avs_commons/*
+avs_commons/compat/*
+examples/*
+*/demo/*
+*/doc/*
+*/examples/*
+*/tests/*
+*/tools/*

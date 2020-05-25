@@ -1,0 +1,30 @@
+{
+    "macros": [
+        "MBED_CPU_STATS_ENABLED=1",
+        "MBED_HEAP_STATS_ENABLED=1",
+        "MBED_MEM_TRACING_ENABLED=1",
+        "MBED_STACK_STATS_ENABLED=1",
+        "MBEDTLS_MD5_C=1"
+    ],
+    "target_overrides": {
+        "*": {
+            "platform.stdio-baud-rate": 115200
+        },
+        "DISCO_L496AG": {
+            "target.network-default-interface-type": "CELLULAR",
+            "nsapi.default-cellular-apn": "\"Plus\"",
+            "QUECTEL_BG96.provide-default": 1,
+            "QUECTEL_BG96.tx" : "PB_6",
+            "QUECTEL_BG96.rx" : "PG_10",
+            "QUECTEL_BG96.rst" : "PB_2",
+            "QUECTEL_BG96.pwr" : "PD_3"
+        },
+        "NRF52840_DK": {
+            "target.network-default-interface-type": "CELLULAR",
+            "nsapi.default-cellular-apn": "\"Plus\"",
+            "QUECTEL_BG96.provide-default": 1,
+            "QUECTEL_BG96.tx" : "D8",
+            "QUECTEL_BG96.rx" : "D7"
+        }
+    }
+}
