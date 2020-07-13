@@ -240,7 +240,7 @@
  * TinyDTLS support is only rudimentary.
  */
 /**@{*/
-#define AVS_COMMONS_WITH_MBEDTLS
+/* #undef AVS_COMMONS_WITH_MBEDTLS */
 /* #undef AVS_COMMONS_WITH_OPENSSL */
 /* #undef AVS_COMMONS_WITH_TINYDTLS */
 /**@}*/
@@ -549,13 +549,3 @@
 /**@}*/
 
 #endif /* AVS_COMMONS_CONFIG_H */
-
-// mbed OS 5.12 branch uses a development version of mbed TLS that defines
-// MBEDTLS_VERSION_NUMBER to 0. This breaks our version checks, so let's spoof
-// the version number as 2.16 (mbed OS 5.11 uses mbed TLS 2.15, mbed OS 5.13
-// uses mbed TLS 2.17, so let's sit right in the middle).
-#include <mbedtls/version.h>
-#if MBEDTLS_VERSION_NUMBER == 0
-#   undef MBEDTLS_VERSION_NUMBER
-#   define MBEDTLS_VERSION_NUMBER 0x02100000
-#endif

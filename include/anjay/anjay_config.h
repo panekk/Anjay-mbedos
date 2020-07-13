@@ -109,7 +109,7 @@
  *
  * Only meaningful if <c>ANJAY_WITH_DOWNLOADER</c> is enabled.
  */
-#define ANJAY_WITH_HTTP_DOWNLOAD
+/* #undef ANJAY_WITH_HTTP_DOWNLOAD */
 
 /**
  * Enable support for the LwM2M Bootstrap Interface.
